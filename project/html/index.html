@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Servidor WEB Gestor de Imagens - Login</title>
+		
+		<!-- Bootstrap minified CSS -->
+		<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="../bootstrap/bootstrap-theme.min.css">
+
+		<!-- Personal Styles -->
+		<link rel="stylesheet" href="../css/style.css">
+
+        <script src="../js/login.js"></script>
+
+	</head>
+
+	<!-- <body style="background-color: aqua;">         Maneira só com HTML; envia POST para o método descrito no formaction dos botões abaixo. O botão do reset também funciona sozinho, sem javascript
+        <div>
+            <!-- <form method="post">
+                <p>Username</p>
+                <input type="text" name="username" value="" size="15" maxlength="40"/>
+                <p>Password</p>
+                <input type="password" name="password" value="" size="10" maxlength="40"/>
+                
+                <br>
+
+                <p>
+                    <button formaction="acios/doLogin">Login</button>
+                    <button formaction="acios/doRegister">Register</button>
+                </p>
+
+
+                <p><input type="reset" value="Clear"/></p>
+            </form>
+            
+    </div>
+	</body> -->
+
+
+    <body class="stylador">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Laboratórios de Informática</a>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#page1">Login/Register</a></li>	
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a onclick="about()" target="_blank">About</a></li>
+					</ul>
+				</div>
+			</nav>
+	
+    
+			<h2 id="page1" style="text-align:center">Login para entrar em Servidor WEB Gestor de Imagens </h2>
+			<br>
+		</div>
+
+
+        <div>
+
+            <!-- o form estava a mandar sempre POST ou GET ao servidor (à root, que não aceita parâmetros como username nem password) -->
+                <p>Username</p>
+                <input type="text" name="username" id="username" value="" size="15" maxlength="40" style="color: blue;"/>
+                <p>Password</p>
+                <input type="password" name="password" id="password" value="" size="10" maxlength="40" style="color: blue;"/>
+                
+                <br>
+                <br>
+                <br>
+
+                <p>
+                    <button onclick="doLogin()" style="background-color: blue;">Login</button>
+                    <button onclick="doRegister()" style="background-color: blue;">Register</button>
+                </p>
+
+
+                <p><input type="reset" value="Clear" onclick="clearInputs()" style="background-color: blue;"/></p>
+            
+
+
+        </div>
+
+	</body>
+
+
+</html>
+
+

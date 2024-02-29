@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Servidor WEB Gestor de Imagens</title>
+		
+		<!-- Bootstrap minified CSS -->
+		<link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="../bootstrap/bootstrap-theme.min.css">
+
+		<!-- Personal Styles -->
+		<link rel="stylesheet" href="../css/style.css">
+
+
+		<script src="../js/login.js"></script>	
+		
+
+	</head>
+
+	<body class="stylador">
+		<div class="container">
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Laboratórios de Informática</a>
+				</div>
+
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#page1">Home</a></li>
+						<!-- <li><a href="../html/gallery.html" target="_blank">Gallery Page</a></li>		  
+						<li><a href="../html/upload.html" target="_blank">UpLoad Page</a></li>
+						<li><a href="../html/image_manipulation.html" target="_blank">Imagem Manipulation Page</a></li>		 -->
+						<li><a onclick="get_page('gallery')" target="_blank">Gallery Page</a></li>		  
+						<li><a onclick="get_page('upload')" target="_blank">UpLoad Page</a></li>
+						<li><a onclick="get_page('image_manipulation')" target="_blank">Imagem Manipulation Page</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active"><a onclick="about()" target="_blank"><span class="glyphicon glyphicon-user"></span> About</a></li>
+					</ul>
+				</div>
+			</nav>
+	
+    
+			<h2 id="page1" style="text-align:center">Servidor WEB Gestor de Imagens</h2>
+			<br>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<title>Image Manipulation</title>
+
+		<!-- Bootstrap minified CSS -->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		
+		<!-- Personal Styles -->
+		<link rel="stylesheet" href="../css/style.css">
+
+		<!-- jQuery library -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="../bootstrap/jquery.min.js"></script>
+
+		<!-- Javascript for Image Manipulation -->
+		<!-- <script src="../js/image_manipulation.js"></script> -->
+		<script src="../js/image_handler.js" type="module"></script>
+	</head>
+
+	<body style="font-size: 15px" class="stylador">
+		<h1>Image Manipulation</h1>
+		<hr>
+		<div class="row">
+			<div class="columnleft">
+				<h3>Original Image</h3>
+				<hr>
+				<div id="original_image">
+					<input type="file" accept="image/*" onchange="handler_updatePhoto(event)">
+					<canvas id="photo" width="550" height="450"></canvas>
+				</div>
+			</div>
+			
+			<div class="columnright">
+				<h3>Manipulated Image</h3>
+				<hr>
+				<div id="manipulated_image" style="border: 3px solid"></div>
+			</div>
+		</div>
+
+
+
+        <div>
+            <form>
+				<label for="algo">Choose an algorithm:</label>
+				<select id="algo" name="Algorithm" style="color: blue;" required onchange="handler_im_modificador(event)">
+					<option value="">--Please select an algorithm--</option>
+				  <option value="Watermark">Watermark</option>
+				  <option value="Vignette">Vignette</option>
+				  <option value="Bordador">Borderer</option>
+				  <option value="Sepsis/Lomography">Sepsis/Lomography</option>
+				  <option value="Saturation">Saturation</option>
+				  <option value="Gamma">Gamma</option>
+				  <option value="Intensifier">Intensifier</option>
+				  <option value="Resizer">Resizer</option>
+				  <option value="Unknown">Unknown</option>
+				</select>
+				<br><br><br>
+				<input type="button" class="btn btn-success" value="Manipulate" onclick="handler_manipulateImage()">
+			  </form>
+            <br><br><br>
+        </div>
+
+
+		<div id = "other_image">
+		</div>
+
+		
+		<br><br><br>
+        <div>
+			<br><br><br>
+			<input type="button" class="btn btn-success" value="Close" onclick="handler_tmp_cleaner()">
+		</div>
+
+	</body>
+</html>
